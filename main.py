@@ -1,13 +1,12 @@
 from collections import defaultdict
 import os
-import time
 
 def printInfo():
-    print('-----------------------------------')
+    print('-----------------------------------------------------------')
     print('歡迎使用去重工具 v1.0')
-    print('作者：小麥')
-    print('GitHub： https://github.com/WorldOfWheat')
-    print('-----------------------------------')
+    print('作者：小麥 WorldOfWheat')
+    print('GitHub： https://github.com/WorldOfWheat/FilesUniqueTool')
+    print('-----------------------------------------------------------')
 
 def getInput():
     result = [] 
@@ -23,10 +22,10 @@ def getInput():
 
     while True:
         _input = input('是否去重路徑內的所有資料夾 true/false: ')
-        if (_input.lower() == 'true') or (_input.lower() == 'false'):
+        if (_input.lower() == 'true') or (_input.lower() == 'false') or (_input == '1') or (_input == '0'):
             break
         print('輸入格式錯誤')
-    result.append(True if _input.lower() == 'true' else False)
+    result.append(True if (_input.lower() == 'true') or (_input == 1) else False)
             
     return result
 
@@ -52,7 +51,9 @@ def main():
     printInfo()
     path = getInput()
     uniquePath(path[0], path[1])
-    print('!去重完成!')
+    print('-------------------------去重完成--------------------------')
+    os.system('pause')
+    
 
 if __name__ == '__main__':
     main()
