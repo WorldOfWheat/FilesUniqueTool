@@ -1,9 +1,8 @@
-from collections import defaultdict
 from sortedcontainers import SortedList
 import os
 
 welcomeMsg = '''-----------------------------------------------------------
-歡迎使用去重工具 v1.0
+歡迎使用去重工具 v1.1
 作者：小麥 WorldOfWheat
 GitHub： https://github.com/WorldOfWheat/FilesUniqueTool
 -----------------------------------------------------------'''
