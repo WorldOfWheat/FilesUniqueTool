@@ -42,7 +42,7 @@ def uniquePath(path, withDir):
                 uniquePath(fullPath, True)
             continue
         with open(fullPath, 'rb') as file:
-            data = file.read(512)
+            data = file.read()
             if _map.get(data.hex(), None) == None:
                 _map[data.hex()] = SortedList()
             _map[data.hex()].add(fullPath)
